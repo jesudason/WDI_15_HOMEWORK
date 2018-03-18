@@ -6,8 +6,8 @@
 <body>
 <h1>Nicole's PTV Journey Planner</h1>
 
-<select style="width: 280px" id="origin" name="origin">
-	<option selected="">Please select destination station</option>
+<select style="width: 280px" id="origin" name="origin" onchange="origin">
+	<option selected="">Please select starting station</option>
   <option>Burnley</option>
   <option>East Richmond</option>
   <option>Flagstaff</option>
@@ -25,7 +25,7 @@
   <option>Windsor</option>
 </select>
 <br></br>
-<select style="width: 280px" id="destination" name="destination">
+<select style="width: 280px" id="destination" name="destination" onchange="destination()">
   <option selected="">Please select destination station</option>
   <option>Burnley</option>
   <option>East Richmond</option>
@@ -45,7 +45,9 @@
 </select>
 
 <br></br>
-<button onclick="stops()">Track Journey</button>
+<button onclick="logJourney()">Track Journey</button>
+<p id="insert">Your Journey:</p>
+
 <script src="ptv_play.js"></script>
 </body>
 </html>

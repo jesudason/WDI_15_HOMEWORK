@@ -5,21 +5,22 @@ var glenWaverley = ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 
 var sandringham = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor'];
 var allTrainLines = [alamein, glenWaverley, sandringham];
 
-var origin = function() {
-	return document.getElementById("origin").value;
-	}
 
-var destination = function() {
-	return document.getElementById("destination").value;
-	}
+// var origin = function() {
+// 	return document.getElementById("origin").value;
+// 	}
 
-// var origin = prompt('Please enter origin station');
-// var destination = prompt('Please enter your destination');
+// var destination = function() {
+// 	return document.getElementById("destination").value;
+// 	}
+
+var origin = prompt('Please enter origin station');
+var destination = prompt('Please enter your destination');
 
 
 var originSearch = function() { 
 	for (var i = 0; i < allTrainLines.length; i++) {
-		if (allTrainLines[i].includes(origin())) {
+		if (allTrainLines[i].includes(origin)) {
 			return allTrainLines[i];
 		}
 	}
@@ -27,15 +28,15 @@ var originSearch = function() {
 
 var destinationSearch = function() {
 	for (var i = 0; i < allTrainLines.length; i++) {
-		if (allTrainLines[i].includes(destination())) {
+		if (allTrainLines[i].includes(destination)) {
 			return allTrainLines[i];
 		}
 	}
 }
 
-var originIndex = originSearch().indexOf(origin());
+var originIndex = originSearch().indexOf(origin);
 
-var destinationIndex = destinationSearch().indexOf(destination());
+var destinationIndex = destinationSearch().indexOf(destination);
 
 
 // returns journey based on travel direction
@@ -84,12 +85,18 @@ var journeyPlanner = function() {
 		return (toRichmond().concat(fromRichmond()));
 	}
 }
+
 var stops = function() {
 	console.log('Trip Origin: ' + journeyPlanner()[0]);
 	for (var j = 1; j < journeyPlanner().length-1; j++) {
 		console.log('Stop ' + j + '. ' + journeyPlanner()[j]);
 	}
-	console.log('Destination: ' + journeyPlanner()[journeyPlanner().length-1]);	
+	console.log('Destination: ' + journeyPlanner()[journeyPlanner().length-1]);
 }
+
+var logJourney = function() {
+	document.getElementById("insert").innerHTML = stops();
+}
+
 
 

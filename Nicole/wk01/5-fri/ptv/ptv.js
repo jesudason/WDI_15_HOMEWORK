@@ -25,10 +25,9 @@ concat origin to Rich and Rich to destination
 print result
 
 */
-var i;
 
 var originSearch = function() {
-	for (i = 0; i < allTrainLines.length; i++) {
+	for (var i = 0; i < allTrainLines.length; i++) {
 		if (allTrainLines[i].includes(origin)) {
 			return allTrainLines[i];
 		}
@@ -36,7 +35,7 @@ var originSearch = function() {
 }
 
 var destinationSearch = function() {
-	for (i = 0; i < allTrainLines.length; i++) {
+	for (var i = 0; i < allTrainLines.length; i++) {
 		if (allTrainLines[i].includes(destination)) {
 			return allTrainLines[i];
 		}
