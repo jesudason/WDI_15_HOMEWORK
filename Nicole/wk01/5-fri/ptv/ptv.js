@@ -8,6 +8,7 @@ var allTrainLines = [alamein, glenWaverley, sandringham];
 var origin = prompt('Please enter origin station');
 var destination = prompt('Please enter your destination');
 
+
 /*
 Search for both origin and destination in array 1
 	If not found, search array 2
@@ -88,9 +89,16 @@ var fromRichmond = function() {
 
 var journeyPlanner = function() {
 	if ((originSearch().includes(origin) == true) && (originSearch().includes(destination) == true)) {
-		console.log(oneTrip());
+		return (oneTrip());
 	} else {
-		console.log(toRichmond().concat(fromRichmond()));
+		return (toRichmond().concat(fromRichmond()));
 	}
 }
-console.log(journeyPlanner());
+var stops = function() {
+	console.log('Trip Origin: ' + journeyPlanner()[0]);
+	for (var j = 1; j < journeyPlanner().length-1; j++) {
+		console.log('Stop ' + j + '. ' + journeyPlanner()[j]);
+	}
+	console.log('Destination: ' + journeyPlanner()[journeyPlanner().length-1]);	
+}
+stops();
