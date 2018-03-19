@@ -6,16 +6,16 @@ var sandringham = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Wind
 var allTrainLines = [alamein, glenWaverley, sandringham];
 
 
-// var origin = function() {
-// 	return document.getElementById("origin").value;
-// 	}
+	var origin = function() {
+		return document.getElementById("origin").value;
+		}
 
-// var destination = function() {
-// 	return document.getElementById("destination").value;
-// 	}
+	var destination = function() {
+		return document.getElementById("destination").value;
+		}
 
-var origin = prompt('Please enter origin station');
-var destination = prompt('Please enter your destination');
+// var origin = prompt('Please enter origin station');
+// var destination = prompt('Please enter your destination');
 
 
 var originSearch = function() { 

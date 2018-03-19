@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #D7D7D7;
+	font-family: sans-serif;
+}
+
+header {
+	display: inline block;
+	position: relative;
+}
+.container {
+	position: relative;
+}
+.header {
+	float: left;
+	z-index: 1;
+	width: 25%
+}
+
+.logo img {
+	z-index: 2;
+	position: absolute;
+}
+
+main {
+	position: absolute;
+	background-color: white;
+	padding: 20px;
+	width: 68%;
+}
+
+main img {
+	width: 100%;
+}
+
+section {
+	position: static;
+	background-color: white;
+	float: right;
+	padding: 20px;
+	font-weight: lighter;
+	width: 30%;
+}
+
+h5 {
+	margin: 7px;
+
+}
+.sideimage {
+	display: inline;
+}
+
+
