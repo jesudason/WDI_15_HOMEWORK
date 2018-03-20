@@ -5,6 +5,8 @@
 body {
 	background-color: #D7D7D7;
 	font-family: sans-serif;
+	background-image: url("../images/background.jpg");
+	background-repeat: repeat-x;
 }
 
 header {
@@ -14,15 +16,15 @@ header {
 .container {
 	position: relative;
 }
+
 .header {
 	float: left;
 	z-index: 1;
 	width: 25%
 }
 
-.logo img {
-	z-index: 2;
-	position: absolute;
+.logo {
+	margin: auto;
 }
 
 main {
