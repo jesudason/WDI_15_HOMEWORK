@@ -145,11 +145,13 @@ ul {
 
 .footer > li {
 	display: inline-block;
-	border-right: grey solid 1px;
+	border-left: grey solid 1px;
 	color: red;
 	text-align: left;
 	padding: 0 5px;	
 }
+
+
 
 .copyright {
 	font-size: 11px;
