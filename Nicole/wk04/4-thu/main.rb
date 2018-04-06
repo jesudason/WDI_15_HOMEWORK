@@ -10,4 +10,6 @@ get '/' do
 	erb :index	
 end
 
-
+get '' do
+	"page missing"
+end
