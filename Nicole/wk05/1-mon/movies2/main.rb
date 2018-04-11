@@ -1,7 +1,5 @@
-     
 require 'sinatra'
 require 'sinatra/reloader'
-
 require 'httparty'
 require 'pry'
 
@@ -25,9 +23,13 @@ get '/movie_list' do
 end
 
 get '/movie' do
-	url = "http://omdbapi.com/?apikey=2f6435d9@t=jaws"
-	@result = HTTParty.get(url)
-binding.pry
+
+	@title = params[:title]
+	url = "http://omdbapi.com/?apikey=2f6435d9&t=#{@title}"
+	result = HTTParty.get(url)
+
+
+# binding.pry
 	erb :movie
 	# @director = result.parsed_response['Director']
 	# @plot = result.parsed_response['Plot']
