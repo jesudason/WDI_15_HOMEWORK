@@ -22,7 +22,7 @@ class Monkey
 	end
 
 	def eat(food)
-		@foods_eaten = @foods_eaten.push food
+		@foods_eaten.push food
 	end
 
 	def introduce
@@ -32,4 +32,5 @@ class Monkey
 			@introduce = puts "Hello! I am #{@name}, a #{@species} monkey. I had #{@foods_eaten[0]} for brunch."
 		end
 	end
+	binding.pry
 end

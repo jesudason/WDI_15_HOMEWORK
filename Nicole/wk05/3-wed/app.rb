@@ -11,34 +11,34 @@ adam.introduce # "Hi my name is Adam. I am a Spider Monkey. I had fruit salad an
 
 =end
 
-load 'monkey.rb'
-puts "what is the monkey's name?"
-name = gets.chomp
+# require_relative 'monkey.rb'
+# puts "what is the monkey's name?"
+# first = gets.chomp
 
-puts "what species is #{name}"
-species = gets.chomp
-monkey = Monkey.new(name, species)
+# puts "what species is #{name}"
+# second = gets.chomp
+# monkey = Monkey.new(first, second)
 
-puts "what did #{name} eat?"
-food = gets.chomp
-monkey.eat(food)
+# puts "what did #{name} eat?"
+# food = gets.chomp
+# monkey.eat(food)
 
-loop do
-puts "any other food?"
-more_food = gets.chomp
-	if more_food == 'yes'
-		puts "what else did #{name} eat?"
-		food = gets.chomp
-		monkey.eat(food)
-	else 
-		puts monkey.introduce
-		break
-	end
-end
+# loop do
+# puts "any other food?"
+# more_food = gets.chomp
+# 	if more_food == 'yes'
+# 		puts "what else did #{name} eat?"
+# 		food = gets.chomp
+# 		monkey.eat(food)
+# 	else 
+# 		puts monkey.introduce
+# 		break
+# 	end
+# end
 
-# adam = Monkey.new("Adam", "Spider Monkey")
-# adam.eat('fruit salad')
-# adam.eat('banana milkshake')
-# adam.introduce
+adam = Monkey.new("Adam", "Spider Monkey")
+adam.eat('fruit salad')
+adam.eat('banana milkshake')
+adam.introduce
 
 # binding.pry

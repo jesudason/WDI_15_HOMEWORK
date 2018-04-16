@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to right, white, violet);
+	font-family: 'Tajawal', sans-serif;
+}
+
+h1, h2 {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+footer {
+	padding: 20px;
+	font-family: sans-serif;
+}
+
+a {
+	padding-top: 20px;
+}
+
+form {
+	text-align: center;
+}
