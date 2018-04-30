@@ -1,9 +1,9 @@
 
 <div class="movieDetails">
-	<p><%= @movie %></p>
-	<p>Directed by: <%= @director %></p>
-	<p><%= @plot %></p>
-	<p><%= @website %></p>
-
+	<p> <%= @movie.title %> </p>
+	<p> Directed by: <%= @movie.director %> </p>
+	<p> <%= @movie.plot %> </p>
+	<p> <%= @movie.website %> </p>
+	<p> <%= @movie.omdb_id %> </p>
+	<img src="<%= @movie.poster %>">
 </div>
-<img src="<%= @poster %>">
