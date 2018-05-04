@@ -7,7 +7,6 @@ function addCity(city, className) {
     var option = document.createElement("option");
     option.text = city;
     option.value = className;
-    console.log(this);
 	cityType.add(option);
 }
 

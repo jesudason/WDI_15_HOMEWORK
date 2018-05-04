@@ -1,0 +1,27 @@
+<h1>Task Manager</h1>
+
+<form action="/tasks" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label for="">task</label>
+	<input type="text" name="name">
+	<label for="">description</label>
+	<textarea name="description"></textarea>
+	<button>create task</button>
+</form>
+
+	<div class="container">
+		<section class="task-list">
+			<% @tasks.each do |task| %>
+				<div class="task">
+					<p>Task: <%= task.name%></p>
+					<p>Description: <%= task.description%></p>
+					<form action="/tasks/<%= task.id %>" method="post">
+						<input type="hidden" name="_method" value="delete">
+						<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+						<button>delete</button>
+					</form>
+				</div>
+			<% end%>
+		</section>
+	</div>
+
