@@ -5,8 +5,11 @@ var glenWaverley = ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 
 var sandringham = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor'];
 var allTrainLines = [alamein, glenWaverley, sandringham];
 
-var origin = prompt('Please enter origin station');
-var destination = prompt('Please enter your destination');
+// var origin = prompt('Please enter origin station');
+// var destination = prompt('Please enter your destination');
+
+var origin = document.querySelector('.origin-input');
+var destination = document.querySelector('.destination-input');
 
 
 /*

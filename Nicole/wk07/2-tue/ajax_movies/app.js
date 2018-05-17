@@ -12,11 +12,13 @@ $searchForm.on('submit', function(event) {
 	
 	var options =  {
 		url: 'http://omdbapi.com/?s='+ $queryInput.val() +'&apikey=2f6435d9'
+
 	}
 
 	var showResults = function(res) {
-		res.Search.forEach(function(movie) {
-			console.log(movie)
+			console.log(res[0].volumeInfo)
+		
+		// res.forEach(function(.volumeInfo) {
 			// var newElem = document.createElement('p');
 			// newElem.textContent = movie.Title;
 
@@ -31,7 +33,7 @@ $searchForm.on('submit', function(event) {
 			$resultsDiv.append($h2);
 
 			// var $newElem = $('<p>')
-		})
+		// })
 	}
 
 $.ajax(options).done(showResults);
@@ -55,4 +57,9 @@ $.ajax(options).done(showResults);
 // 		})
 		
 // 	});
+
+
+// AIzaSyCb3xZRndlaQt34LVdpUYU6nHwvNTfb4K0
+
+'https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCb3xZRndlaQt34LVdpUYU6nHwvNTfb4K0'
 
