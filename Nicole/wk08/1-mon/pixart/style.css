@@ -12,3 +12,7 @@
 	flex-flow: wrap;
 	width: 450px;
 }
+
+.clicked {
+	background-color: pink;
+}
